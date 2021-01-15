@@ -29,7 +29,10 @@
   </head>
 
   <body>
-    <nav id="mainNavbar" class="navbar navbar-expand-md navbar-dark py-0">
+    <nav
+      id="mainNavbar"
+      class="navbar navbar-expand-md navbar-dark py-0 fixed-top"
+    >
       <a href="#" class="navbar-brand">CANDY</a>
       <button
         type="button"
@@ -84,7 +87,7 @@
         </div>
         <div class="col-md-6 text-center order-1 order-md-2">
           <div class="row justify-content-center">
-            <div class="col-10 col-lg-8 blurb">
+            <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
               <h2>MUSEUM OF CANDY</h2>
               <img
                 src="imgs/lolli_icon.png"
@@ -97,21 +100,15 @@
                 perferendis adipisci, voluptatem repudiandae nisi alias iusto
                 possimus iure minima aperiam officia animi?Eveniet doloribus
                 dolorem nemo fugiat asperiores architecto sed accusamus ex!
-                Tenetur id alias, maxime iure accusantium animi at impedit vel?
-                Vero quisquam totam ipsam voluptatibus nostrum, sit libero in
-                mollitia?
               </p>
             </div>
           </div>
         </div>
       </div>
       <div class="row align-items-center content">
-        <div class="col-md-6 order-1 order-md-2">
-          <img src="imgs/gumball.png" alt="" class="img-fluid" />
-        </div>
-        <div class="col-md-6 text-center order-2 order-md-1">
+        <div class="col-md-6 text-center">
           <div class="row justify-content-center">
-            <div class="col-10 col-lg-8 blurb">
+            <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
               <h2>MUSEUM OF CANDY</h2>
               <img
                 src="imgs/lolli_icon.png"
@@ -124,9 +121,34 @@
                 perferendis adipisci, voluptatem repudiandae nisi alias iusto
                 possimus iure minima aperiam officia animi?Eveniet doloribus
                 dolorem nemo fugiat asperiores architecto sed accusamus ex!
-                Tenetur id alias, maxime iure accusantium animi at impedit vel?
-                Vero quisquam totam ipsam voluptatibus nostrum, sit libero in
-                mollitia?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="imgs/gumball.png" alt="" class="img-fluid" />
+        </div>
+      </div>
+      <div class="row align-items-center content">
+        <div class="col-md-6 order-2 order-md-1">
+          <img src="imgs/sprinkles.png" alt="" class="img-fluid" />
+        </div>
+        <div class="col-md-6 text-center order-1 order-md-2">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+              <h2>MUSEUM OF CANDY</h2>
+              <img
+                src="imgs/lolli_icon.png"
+                alt=""
+                class="d-none d-lg-inline"
+              />
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis quibusdam vitae animi quod amet. Nobis, pariatur quam
+                quas doloremque culpa inventore omnis dolor sint molestias
+                corrupti ullam ab placeat recusandae.Quis dolorum perspiciatis
+                voluptate unde, temporibus suscipit natus eveniet cupiditate ea
+                error!
               </p>
             </div>
           </div>
@@ -150,5 +172,13 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $("#mainNavbar");
+          $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
   </body>
 </html>
